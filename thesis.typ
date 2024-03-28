@@ -1,7 +1,7 @@
 
-#import "./template.typ": *
+#import "./thesis/template.typ": *
 
-#include "./parts/title.typ"
+#include "./thesis/parts/title.typ"
 
 // Определение шаблона 
 #show: phd-template.with(
@@ -24,29 +24,29 @@
 #outline(title: "Содержание", indent: 1.5em, depth: 3,)
 
 // Основные части документа 
-#include "./parts/intro.typ"
+#include "./thesis/parts/intro.typ"
 #show heading.where(level:1): set heading(numbering: "Глава 1.")
-#include "./parts/part1.typ"
-#include "./parts/part2.typ"
-#include "./parts/part3.typ"
+#include "./thesis/parts/part1.typ"
+#include "./thesis/parts/part2.typ"
+#include "./thesis/parts/part3.typ"
 
 // Выключить нумерацию выходных данных 
 #show heading: set heading(numbering:none)
 
 // Заключение 
-#include "./parts/conclusion.typ"
+#include "./thesis/parts/conclusion.typ"
 
 // Выходные данные
 = Список сокращений и условных обозначений 
-#import "../common/acronyms.typ": acronyms-entries
-#import "../common/symbols.typ": symbols-entries
+#import "./common/acronyms.typ": acronyms-entries
+#import "./common/symbols.typ": symbols-entries
 #print-glossary(acronyms-entries+symbols-entries)
 
 = Словарь терминов 
-#import "../common/glossary.typ": glossary-entries
+#import "./common/glossary.typ": glossary-entries
 #print-glossary(glossary-entries)
 
-#bibliography(title: "Список литературы", ("../common/external.bib","../common/author.bib"), style: "ieee")
+#bibliography(title: "Список литературы", ("./common/external.bib","./common/author.bib"), style: "ieee")
 
 #show outline: set heading(outlined: true)
 
@@ -55,4 +55,4 @@
 #outline(title: "Список таблиц", target: figure.where(kind: table))
 
 // Приложения 
-#include "./parts/appendix.typ"
+#include "./thesis/parts/appendix.typ"
