@@ -8,7 +8,11 @@
   "customizations": {
     "vscode": {
       "settings": {
-        "editor.formatOnSave": true
+        "editor.formatOnSave": true,
+        // Specify file types to spell check.
+        "cSpell.enabledLanguageIds": [
+          "typst"
+        ]
       },
       "extensions": [
         "nvarner.typst-lsp",
