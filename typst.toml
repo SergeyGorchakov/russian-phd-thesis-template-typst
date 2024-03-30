@@ -2,7 +2,7 @@
 name = "russian-phd-thesis"
 version = "0.0.1"
 compiler = "0.11.0"
-entrypoint = "thesis.typ"
+entrypoint = "template/thesis.typ"
 repository = "https://github.com/SergeyGorchakov/russian-phd-thesis-template-typst"
 authors = ["Sergei Gorchakov"]
 license = "MIT"
@@ -11,6 +11,6 @@ keywords = ["thesis", "phd", "vak", "russian"]
 categories = ["thesis"]
 
 [template]
-path = [".devcontainer", "common", "images", "thesis"]
+path = "template"
 entrypoint = "thesis.typ"
-thumbnail = "images/thumbnail.png"
+thumbnail = "thumbnail.png"
