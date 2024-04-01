@@ -3,6 +3,7 @@
 #import "@preview/glossarium:0.2.6":*
 #import "@preview/codly:0.2.0": *
 #import "@preview/tablex:0.0.8": tablex, vlinex, hlinex, colspanx, rowspanx, cellx
+#import "@preview/unify:0.5.0": *
 
 // Установка свойств к PDF файлу 
 #set document(author: author-name, title: thesis-title)
