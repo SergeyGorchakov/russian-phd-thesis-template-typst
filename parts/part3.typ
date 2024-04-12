@@ -1,4 +1,5 @@
-#import "../template.typ": *
+#import "../lib.typ": *
+
 #part_count.step() // Обновление счетчика разделов 
 = Вёрстка таблиц <ch3>
 

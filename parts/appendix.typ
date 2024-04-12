@@ -1,4 +1,4 @@
-#import "../template.typ": *
+#import "../lib.typ": *
 #show: phd-appendix 
 
 = Примеры вставки листингов программного кода <app:A>
