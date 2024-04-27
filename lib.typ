@@ -101,6 +101,10 @@
   }
   bib_count.step() // Счетчик библиографии
   }
+  // Отображение ссылок на figure (рисунки и таблицы) - ничего не отображать
+  set ref(supplement: it => {
+    if it.func() == figure {}
+  })
 
   // Настройка блоков кода 
   show: codly-init.with()
@@ -126,15 +130,13 @@
   set figure(supplement: [Рисунок])
   set figure.caption(separator: [ -- ])
   set figure(numbering: num => 
-    ((counter(heading.where(level:1)).get() + (num,)).map(str).join(".")),
-    supplement: [Рисунок],)
+    ((counter(heading.where(level:1)).get() + (num,)).map(str).join(".")),)
   
   // Настройка таблиц
   show figure.where(kind:table): set figure.caption(position: top)
   show figure.where(kind:table): set figure(supplement: [Таблица])
   show figure.where(kind:table): set figure(numbering: num => 
-    ((counter(heading.where(level:1)).get() + (num,)).map(str).join(".")),
-    supplement: [Таблица],)
+    ((counter(heading.where(level:1)).get() + (num,)).map(str).join(".")),)
   // Разбивать таблицы по страницам 
   show figure: set block(breakable: true)
   
