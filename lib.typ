@@ -12,9 +12,7 @@
 #let total_page = context[#counter(page).final().at(0)]
 #let total_fig = context[#counter(figure).final().at(0)]
 #let total_table = context[#counter(figure.where(kind:table)).final().at(0)]
-
-#let bib_count = counter("bib_refs")
-#let total_bib = context[#bib_count.final().at(0)]
+#let total_bib = context (query(selector(ref)).filter(it => it.element == none).map(it => it.target).dedup().len())
 
 // Это входная точка - общий шаблон  
 #let template(
@@ -94,13 +92,6 @@
     it
   }
 
-  show ref: it => {
-  it 
-  if it.element != none {
-    return 
-  }
-  bib_count.step() // Счетчик библиографии
-  }
   // Отображение ссылок на figure (рисунки и таблицы) - ничего не отображать
   set ref(supplement: it => {
     if it.func() == figure {}
