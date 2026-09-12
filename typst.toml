@@ -1,10 +1,10 @@
 [package]
 name = "modern-russian-dissertation"
-version = "0.0.1"
-compiler = "0.11.0"
+version = "0.0.3"
+compiler = "0.13.1"
 entrypoint = "lib.typ"
 repository = "https://github.com/SergeyGorchakov/russian-phd-thesis-template-typst"
-authors = ["Sergei Gorchakov"]
+authors = ["Sergei Gorchakov", "Georgy Meshcheryakov"]
 license = "MIT"
 description = "A russian phd thesis template"
 keywords = ["thesis", "phd", "vak", "gost", "russian"]

@@ -1,5 +1,8 @@
 {
   "cSpell.enableFiletypes": [
     "typst"
-  ]
+  ],
+  "[typst]": {
+    "editor.formatOnSave": true
+  }
 }
